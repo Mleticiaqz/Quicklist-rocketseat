@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Quicklist</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <main class="app">
+        <header class="app__header">
+            <h1>Quicklist</h1>
+            <p id="counter" class="app__counter" aria-live="polite">0 itens</p>
+        </header>
+
+        <form id="item-form" class="add" autocomplete="off">
+            <label for="item-input" class="sr-only">Novo item</label>
+            <input id="item-input" type="text" placeholder="O que falta na despensa?" maxlength="60" required />
+            <button type="submit">Adicionar</button>
+        </form>
+
+        <ul id="list" class="list"></ul>
+
+        <p id="empty" class="empty">Sua lista está vazia. Adicione o primeiro item acima.</p>
+    </main>
+
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
